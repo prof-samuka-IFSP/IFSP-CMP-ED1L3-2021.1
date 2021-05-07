@@ -68,17 +68,14 @@ Vetor *knn(const Matrix *X_train, const Vetor *y_train,
     Vetor *y_test = cria_vetor(n_amostras_teste);
 
 
-    // para cada amostra de teste q
-    for (int q = 0; q < n_amostras_teste; q++) {
-        float *distancias = calloc(n_amostras_treino, sizeof(float));
-
-        // para cada amostra de treino p
-        //// distancias[p] = distancia_euclideana(aluno_q, aluno_p)
-        //// ordene(distancias) e retorne os índices originais ordenados
-
-        free(distancias);
-    }
-
+    // para cada amostra de teste q {
+    //     para cada amostra de treino p {
+    //         distancia[p] = compute_distancia(aluno_q, aluno_p)
+    //         ordena(distancias) e retorna os índices originais ordenados
+    //         checa qual o rótulo dos k alunos de treino (vizinhos) mais próximos ao aluno q
+    //         atribui o rótulo mais frequente para o aluno de teste q
+    //     }
+    // }
 
     return y_test;
 }
